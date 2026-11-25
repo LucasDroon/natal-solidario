@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oratório — Natal Solidário 2026 · Pequenos Pés, Grandes Sorrisos</title>
+<style>
+  :root{
+    --navy:#0F2547;
+    --navy-dark:#0A1A33;
+    --navy-mid:#17335F;
+    --gold:#C9A24B;
+    --gold-light:#F0CC6E;
+    --cream:#FBF4E4;
+    --paper:#FFFFFF;
+    --wine:#6B1D3A;
+    --ink:#2A2A2A;
+    --muted:#6B6B6B;
+    --taken:#E3DED0;
+    --pink:#A63D6B;
+    --pink-bg:#FFF4F8;
+    --pink-line:#E3A9C0;
+    --blue:#1F4E8C;
+    --blue-bg:#F2F7FF;
+    --blue-line:#9DBBE3;
+    --green:#4A7856;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:Calibri,'Trebuchet MS',Arial,sans-serif;line-height:1.5;}
+
+  /* Topo com logo */
+  .topo{background:var(--cream);text-align:center;padding:14px 16px 10px;border-bottom:3px solid var(--gold);}
+  .topo img{height:84px;max-width:100%;display:inline-block;}
+
+  /* Cabeçalho azul */
+  header{
+    background:radial-gradient(circle at 50% 0%, var(--navy-mid) 0%, var(--navy) 55%, var(--navy-dark) 100%);
+    color:#fff;text-align:center;padding:30px 18px 36px;position:relative;
+  }
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold));}
+  .medalhao{width:150px;height:auto;display:block;margin:0 auto 14px;filter:drop-shadow(0 0 18px rgba(240,204,110,.35));}
+  .kicker{font-family:Georgia,'Times New Roman',serif;letter-spacing:.16em;color:var(--gold-light);font-size:14px;font-weight:700;text-transform:uppercase;}
+  h1{font-family:Georgia,'Times New Roman',serif;font-size:32px;margin:6px 0 10px;font-weight:700;}
+  .ornamento{width:220px;height:1px;margin:0 auto 14px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+  header p.sub{max-width:520px;margin:0 auto;color:#E3E9F5;font-size:15.5px;}
+
+  .placar{
+    max-width:540px;margin:22px auto 0;background:rgba(255,255,255,.07);
+    border:1.5px solid var(--gold);border-radius:14px;padding:14px 18px 16px;
+  }
+  .placar-linha{display:flex;justify-content:space-between;gap:10px;}
+  .placar-linha > div{flex:1;text-align:center;}
+  .placar .num{font-family:Georgia,serif;font-size:30px;font-weight:700;color:var(--gold-light);line-height:1.1;}
+  .placar .lbl{font-size:13px;color:#D3DCEC;}
+  .barra{height:10px;border-radius:6px;background:rgba(255,255,255,.18);margin-top:12px;overflow:hidden;}
+  .barra > span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-light));transition:width .4s ease;}
+
+  main{max-width:860px;margin:0 auto;padding:24px 16px 50px;}
+
+  .legenda{display:flex;gap:22px;justify-content:center;font-size:13px;color:var(--muted);margin-bottom:14px;flex-wrap:wrap;}
+  .legenda span{display:inline-flex;align-items:center;gap:6px;}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block;}
+  .dot.disp{background:#fff;border:1.5px solid var(--navy);}
+  .dot.tomada{background:#8a8a8a;border:1.5px solid #8a8a8a;}
+
+  .busca{max-width:420px;margin:0 auto 6px;}
+  .busca input{width:100%;padding:11px 14px;border:1.5px solid #D9CFB5;border-radius:10px;font-size:15px;font-family:inherit;background:#fff;}
+  .busca input:focus{outline:none;border-color:var(--navy);}
+
+  .block-title{font-family:Georgia,serif;font-size:26px;margin:30px 0 4px;text-align:center;color:var(--wine);font-weight:700;}
+  .block-title::before,.block-title::after{content:"✦";color:var(--gold);font-size:14px;margin:0 12px;vertical-align:middle;}
+  .block-desc{text-align:center;font-size:14px;color:var(--muted);margin:0 0 16px;}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;}
+
+  .card{
+    text-align:left;border-radius:12px;border:1.5px solid var(--navy);background:var(--paper);
+    padding:12px 14px;cursor:pointer;font-family:inherit;display:flex;flex-direction:column;gap:6px;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .card:hover{transform:translateY(-2px);box-shadow:0 5px 12px rgba(15,37,71,.18);}
+  .card.f{border-color:var(--pink-line);background:var(--pink-bg);}
+  .card.m{border-color:var(--blue-line);background:var(--blue-bg);}
+  .card .nome{font-family:Georgia,serif;font-weight:700;font-size:15.5px;line-height:1.25;color:var(--navy);}
+  .card.f .nome{color:var(--pink);}
+  .card.m .nome{color:var(--blue);}
+  .card .pe{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ink);}
+  .card .pe b{font-size:15px;}
+  .card .status{font-size:11.5px;color:var(--muted);}
+  .card.tomada{background:var(--taken);border-color:#BDB7A5;cursor:default;opacity:.8;}
+  .card.tomada .nome{color:#777;text-decoration:line-through;text-decoration-thickness:1px;}
+  .card.tomada:hover{transform:none;box-shadow:none;}
+  .card.oculto{display:none;}
+
+  .load-state{text-align:center;color:var(--muted);padding:30px 0;font-size:14px;}
+
+  /* Modal */
+  .overlay{position:fixed;inset:0;background:rgba(10,26,51,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:50;}
+  .overlay.show{display:flex;}
+  .modal{background:var(--paper);border-radius:14px;max-width:410px;width:100%;padding:24px;border-top:4px solid var(--gold);max-height:92vh;overflow:auto;}
+  .modal h2{font-family:Georgia,serif;color:var(--navy);margin:0 0 6px;font-size:21px;}
+  .modal .resumo{background:var(--cream);border:1px solid #E4D9BC;border-radius:10px;padding:10px 12px;margin:8px 0 14px;font-size:14px;}
+  .modal .resumo strong{display:block;font-family:Georgia,serif;font-size:17px;color:var(--navy);}
+  .modal p.desc{color:var(--muted);font-size:13.5px;margin:0 0 6px;}
+  label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin:12px 0 5px;}
+  input{width:100%;padding:10px 12px;border:1.5px solid #D6D2C6;border-radius:8px;font-size:14.5px;font-family:inherit;color:var(--ink);}
+  input:focus{outline:none;border-color:var(--navy);}
+  input.invalid{border-color:#C0392B;background:#FFFBFA;}
+  .field-hint{font-size:11.5px;color:var(--muted);margin-top:4px;}
+  .modal-actions{display:flex;gap:10px;margin-top:22px;}
+  button.primary,button.secondary{flex:1;padding:12px;border-radius:8px;font-size:14.5px;font-weight:700;cursor:pointer;border:none;font-family:inherit;}
+  button.primary{background:var(--navy);color:#fff;}
+  button.primary:hover{background:var(--navy-dark);}
+  button.primary:disabled{background:#A9AFBC;cursor:default;}
+  button.secondary{background:transparent;color:var(--muted);border:1.5px solid #D6D2C6;}
+  button.secondary:hover{background:#F0EEE7;}
+  .error-msg{background:#FCEBEA;color:#A33A34;border:1px solid #F0C6C3;border-radius:8px;padding:9px 12px;font-size:13px;margin-top:14px;display:none;}
+  .error-msg.show{display:block;}
+  .success{text-align:center;padding:6px 0 4px;}
+  .success .icon{width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 14px;}
+  .success p{color:var(--muted);font-size:14px;}
+
+  .disclaimer{text-align:center;font-size:12px;color:var(--muted);margin-top:26px;padding-top:16px;border-top:1px solid #E5DCC3;}
+
+  /* Rodapé */
+  .site-footer{background:var(--cream);text-align:center;padding:26px 18px 30px;border-top:1px solid var(--gold);}
+  .site-footer .cruz{display:inline-flex;width:34px;height:34px;border-radius:8px;background:#7A4FC2;color:#fff;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px;}
+  .site-footer .frase{font-style:italic;color:var(--navy);font-size:15px;margin:0 0 10px;}
+  .site-footer .lema{font-family:Georgia,serif;font-style:italic;font-weight:700;color:var(--navy);font-size:19px;margin:0 0 8px;}
+  .site-footer .selo{font-size:12px;letter-spacing:.08em;color:#9A7B2E;text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<div class="topo"><img src="img/oratorio-logo.png" alt="Oratório"></div>
+
+<header>
+  <img class="medalhao" src="img/medalhao.png" alt="Menino Jesus">
+  <div class="kicker">✦ Natal Solidário 2026 ✦</div>
+  <h1>Pequenos Pés, Grandes Sorrisos</h1>
+  <div class="ornamento"></div>
+  <p class="sub">Neste Natal, seja um instrumento do amor de Jesus. Apadrinhe uma criança do Oratório e presenteie-a com um par de chinelos.</p>
+
+  <div class="placar">
+    <div class="placar-linha">
+      <div><div class="num" id="placarApadrinhadas">–</div><div class="lbl">Apadrinhadas</div></div>
+      <div><div class="num" id="placarDisponiveis">–</div><div class="lbl">Disponíveis</div></div>
+      <div><div class="num" id="placarMeta">–</div><div class="lbl">Nossa meta</div></div>
+    </div>
+    <div class="barra"><span id="barraProgresso"></span></div>
+  </div>
+</header>
+
+<main>
+  <div class="legenda">
+    <span><span class="dot disp"></span> Disponível</span>
+    <span><span class="dot tomada"></span> Já apadrinhada</span>
+  </div>
+
+  <div class="busca"><input type="search" id="busca" placeholder="Buscar criança pelo nome…" autocomplete="off"></div>
+
+  <div id="gridArea" class="load-state">Carregando crianças...</div>
+
+  <p class="disclaimer">Iniciativa sem qualquer caráter financeiro. Ao escolher uma criança, você se compromete a providenciar 1 par de chinelos novo, no número indicado, entregue à organização do Oratório.</p>
+</main>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="cruz">✝</div>
+  <p class="frase">Que cada gesto de caridade nos aproxime de Jesus.</p>
+  <p class="lema">Estamos juntos pelo céu!</p>
+  <div class="selo">Oratório • Natal 2026</div>
+</footer>
+
+<script>
+let CRIANCAS = [];
+let claimed = {};
+let pendingId = null;
+
+// ==== Máscara e validação de telefone ====
+function maskTelefone(valor){
+  const d = valor.replace(/\D/g, '').slice(0, 11);
+  if(d.length === 0) return '';
+  if(d.length <= 2) return `(${d}`;
+  if(d.length <= 6) return `(${d.slice(0,2)}) ${d.slice(2)}`;
+  if(d.length <= 10) return `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`;
+  return `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`;
+}
+function validarTelefone(valor){
+  const d = valor.replace(/\D/g, '');
+  if(d.length === 0) return 'Informe um telefone para contato.';
+  if(d.length < 10) return `Telefone incompleto: faltam ${10 - d.length} dígito(s). Informe o DDD + número.`;
+  if(d.length > 11) return 'Telefone inválido: excede 11 dígitos.';
+  const ddd = parseInt(d.slice(0, 2), 10);
+  if(ddd < 11 || ddd > 99) return 'DDD inválido.';
+  if(d.length === 11 && d[2] !== '9') return 'Celular com 11 dígitos deve começar com 9 após o DDD.';
+  return null;
+}
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function semAcento(s){ return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
+
+async function carregar(){
+  try {
+    const [rc, ra] = await Promise.all([fetch('/criancas.json'), fetch('/api/apadrinhamentos')]);
+    CRIANCAS = await rc.json();
+    const data = await ra.json();
+    claimed = {};
+    data.forEach(row => { claimed[row.crianca_id] = row; });
+  } catch(e) {
+    console.error('Erro ao carregar dados', e);
+  }
+  renderGrid();
+}
+
+function criarCard(c){
+  const tomada = !!claimed[c.id];
+  const btn = document.createElement('button');
+  btn.className = 'card ' + (c.genero === 'F' ? 'f' : 'm') + (tomada ? ' tomada' : '');
+  btn.dataset.nome = semAcento(c.nome);
+  btn.innerHTML = `
+    <span class="nome">${esc(c.nome)}</span>
+    <span class="pe">👣 Chinelo nº <b>${esc(c.sapato)}</b></span>
+    <span class="status">${tomada ? (c.genero === 'F' ? 'Já apadrinhada' : 'Já apadrinhado') : 'Toque para apadrinhar'}</span>`;
+  if(tomada){
+    btn.disabled = true;
+    btn.title = c.genero === 'F' ? 'Já apadrinhada' : 'Já apadrinhado';
+  } else {
+    btn.addEventListener('click', () => openForm(c));
+  }
+  return btn;
+}
+
+function renderGrid(){
+  const area = document.getElementById('gridArea');
+  area.className = '';
+  area.innerHTML = '';
+
+  const blocos = [
+    {g:'F', titulo:'Meninas do Oratório', desc:'Escolha uma menina para apadrinhar'},
+    {g:'M', titulo:'Meninos do Oratório', desc:'Escolha um menino para apadrinhar'}
+  ];
+  blocos.forEach(b => {
+    const t = document.createElement('h2'); t.className = 'block-title'; t.textContent = b.titulo; area.appendChild(t);
+    const d = document.createElement('p'); d.className = 'block-desc'; d.textContent = b.desc; area.appendChild(d);
+    const grid = document.createElement('div'); grid.className = 'grid';
+    CRIANCAS.filter(c => c.genero === b.g).forEach(c => grid.appendChild(criarCard(c)));
+    area.appendChild(grid);
+  });
+  updatePlacar();
+  aplicarBusca();
+}
+
+function aplicarBusca(){
+  const q = semAcento(document.getElementById('busca').value.trim());
+  document.querySelectorAll('#gridArea .card').forEach(card => {
+    card.classList.toggle('oculto', q !== '' && !card.dataset.nome.includes(q));
+  });
+}
+
+function updatePlacar(){
+  const total = CRIANCAS.length;
+  const n = CRIANCAS.filter(c => claimed[c.id]).length;
+  document.getElementById('placarApadrinhadas').textContent = n;
+  document.getElementById('placarDisponiveis').textContent = total - n;
+  document.getElementById('placarMeta').textContent = total;
+  document.getElementById('barraProgresso').style.width = (total ? (n / total * 100) : 0) + '%';
+}
+
+function openForm(c){
+  pendingId = c.id;
+  const modal = document.getElementById('modalContent');
+  modal.innerHTML = `
+    <h2>Apadrinhar criança</h2>
+    <div class="resumo"><strong>${esc(c.nome)}</strong>Chinelo nº ${esc(c.sapato)}</div>
+    <p class="desc">Preencha seus dados para confirmar o apadrinhamento. Essas informações servem apenas para controle interno do Oratório.</p>
+    <label for="fNome">Seu nome completo</label>
+    <input type="text" id="fNome" placeholder="Seu nome" autocomplete="name" minlength="3" maxlength="80">
+    <label for="fTelefone">Telefone</label>
+    <input type="tel" id="fTelefone" placeholder="(65) 90000-0000" inputmode="numeric" autocomplete="tel" maxlength="16">
+    <div class="field-hint">DDD + número, com 10 ou 11 dígitos. Ex: (65) 99999-8888</div>
+    <div class="error-msg" id="formError"></div>
+    <div class="modal-actions">
+      <button class="secondary" id="btnCancel">Cancelar</button>
+      <button class="primary" id="btnConfirm">Confirmar</button>
+    </div>`;
+  document.getElementById('overlay').classList.add('show');
+
+  const fNome = document.getElementById('fNome');
+  const fTel = document.getElementById('fTelefone');
+  fTel.addEventListener('input', () => {
+    const pos = fTel.selectionStart, antes = fTel.value.length;
+    fTel.value = maskTelefone(fTel.value);
+    const np = Math.max(0, (pos || 0) + fTel.value.length - antes);
+    fTel.setSelectionRange(np, np);
+    fTel.classList.remove('invalid');
+  });
+  fNome.addEventListener('input', () => fNome.classList.remove('invalid'));
+  document.getElementById('btnCancel').addEventListener('click', closeModal);
+  document.getElementById('btnConfirm').addEventListener('click', submitClaim);
+}
+
+function closeModal(){
+  document.getElementById('overlay').classList.remove('show');
+  pendingId = null;
+}
+function showError(msg){
+  const el = document.getElementById('formError');
+  el.textContent = msg; el.classList.add('show');
+}
+
+async function submitClaim(){
+  const fNome = document.getElementById('fNome');
+  const fTel = document.getElementById('fTelefone');
+  const nome = fNome.value.trim().replace(/\s+/g, ' ');
+  const telefone = fTel.value.trim();
+  document.getElementById('formError').classList.remove('show');
+  [fNome, fTel].forEach(el => el.classList.remove('invalid'));
+
+  if(nome.length < 3){
+    fNome.classList.add('invalid'); showError('Informe seu nome completo (mínimo 3 caracteres).'); fNome.focus(); return;
+  }
+  const erroTel = validarTelefone(telefone);
+  if(erroTel){
+    fTel.classList.add('invalid'); showError(erroTel); fTel.focus(); return;
+  }
+
+  const btn = document.getElementById('btnConfirm');
+  btn.disabled = true; btn.textContent = 'Confirmando...';
+  const id = pendingId;
+  const crianca = CRIANCAS.find(c => c.id === id);
+
+  try {
+    const response = await fetch('/api/apadrinhamentos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ crianca_id: id, nome, telefone })
+    });
+    if(!response.ok){
+      const err = await response.json().catch(() => ({}));
+      showError(err.error || 'Esta criança acabou de ser apadrinhada por outra pessoa. Escolha outra.');
+      btn.disabled = false; btn.textContent = 'Confirmar';
+      carregar();
+      return;
+    }
+    claimed[id] = { crianca_id: id, nome, telefone };
+    showSuccess(crianca);
+    renderGrid();
+  } catch(e) {
+    console.error(e);
+    showError('Erro ao confirmar. Verifique sua conexão e tente novamente.');
+    btn.disabled = false; btn.textContent = 'Confirmar';
+  }
+}
+
+function showSuccess(c){
+  document.getElementById('modalContent').innerHTML = `
+    <div class="success">
+      <div class="icon">✓</div>
+      <h2>${esc(c.nome)} foi ${c.genero === 'F' ? 'apadrinhada' : 'apadrinhado'}!</h2>
+      <p>Obrigado por ser um instrumento do amor de Jesus neste Natal. Providencie 1 par de chinelos novo, nº ${esc(c.sapato)}, e entregue conforme a orientação do Oratório.</p>
+      <div class="modal-actions"><button class="primary" id="btnClose" style="flex:none;width:100%;">Fechar</button></div>
+    </div>`;
+  document.getElementById('btnClose').addEventListener('click', closeModal);
+}
+
+document.getElementById('overlay').addEventListener('click', e => { if(e.target.id === 'overlay') closeModal(); });
+document.getElementById('busca').addEventListener('input', aplicarBusca);
+
+carregar();
+</script>
+</body>
+</html>

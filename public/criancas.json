@@ -1,0 +1,662 @@
+[
+ {
+  "id": 1,
+  "nome": "Gabrielle Vitória Alencastro",
+  "sapato": "24/25",
+  "genero": "F"
+ },
+ {
+  "id": 2,
+  "nome": "Ayla Vitória Leite da Silva",
+  "sapato": "26/27",
+  "genero": "F"
+ },
+ {
+  "id": 3,
+  "nome": "Sara Gabriella Rodrigues dos Santos",
+  "sapato": "26/27",
+  "genero": "F"
+ },
+ {
+  "id": 4,
+  "nome": "Samara Eloa Costa Ribeiro",
+  "sapato": "27",
+  "genero": "F"
+ },
+ {
+  "id": 5,
+  "nome": "Anny Sofia Alves dos Reis",
+  "sapato": "27/28",
+  "genero": "F"
+ },
+ {
+  "id": 6,
+  "nome": "Eloá Hadassa de Lara Toledo",
+  "sapato": "28",
+  "genero": "F"
+ },
+ {
+  "id": 7,
+  "nome": "Agatha Cristiane Andrade dos Santos",
+  "sapato": "28/29",
+  "genero": "F"
+ },
+ {
+  "id": 8,
+  "nome": "Anny Beatriz Pereira da Silva",
+  "sapato": "29",
+  "genero": "F"
+ },
+ {
+  "id": 9,
+  "nome": "Isabella Victoria Ferreira de Jesus",
+  "sapato": "29/30",
+  "genero": "F"
+ },
+ {
+  "id": 10,
+  "nome": "Maria Julia Alcantara da Silva",
+  "sapato": "29/30",
+  "genero": "F"
+ },
+ {
+  "id": 11,
+  "nome": "Allana Beatriz Ferreira de Jesus",
+  "sapato": "30/31",
+  "genero": "F"
+ },
+ {
+  "id": 12,
+  "nome": "Emanuely Vitoria da Silva",
+  "sapato": "31",
+  "genero": "F"
+ },
+ {
+  "id": 13,
+  "nome": "Ariene Eduarda Leite da Silva",
+  "sapato": "31/32",
+  "genero": "F"
+ },
+ {
+  "id": 14,
+  "nome": "Lorraine Valentina da Cruz Santos",
+  "sapato": "31/32",
+  "genero": "F"
+ },
+ {
+  "id": 15,
+  "nome": "Eloa Vitória de Souza Lima",
+  "sapato": "31/32",
+  "genero": "F"
+ },
+ {
+  "id": 16,
+  "nome": "Allana Magalhães de Arruda",
+  "sapato": "32",
+  "genero": "F"
+ },
+ {
+  "id": 17,
+  "nome": "Noemi dos Santos Machado",
+  "sapato": "32",
+  "genero": "F"
+ },
+ {
+  "id": 18,
+  "nome": "Poliana Silva da Costa",
+  "sapato": "32",
+  "genero": "F"
+ },
+ {
+  "id": 19,
+  "nome": "Maria Cecília Marques Batista",
+  "sapato": "32/33",
+  "genero": "F"
+ },
+ {
+  "id": 20,
+  "nome": "Isis Lorena Rangel do Amaral",
+  "sapato": "33",
+  "genero": "F"
+ },
+ {
+  "id": 21,
+  "nome": "Ana Jullya Faria de Oliveira",
+  "sapato": "33/34",
+  "genero": "F"
+ },
+ {
+  "id": 22,
+  "nome": "Jhyennyfer Alves Felipe",
+  "sapato": "33/34",
+  "genero": "F"
+ },
+ {
+  "id": 23,
+  "nome": "Gabrielly Vitória Santos da Silva",
+  "sapato": "33/34",
+  "genero": "F"
+ },
+ {
+  "id": 24,
+  "nome": "Ana Beatriz da Silva Ferreira",
+  "sapato": "34/35",
+  "genero": "F"
+ },
+ {
+  "id": 25,
+  "nome": "Pamela da Silva Duarte",
+  "sapato": "34/35",
+  "genero": "F"
+ },
+ {
+  "id": 26,
+  "nome": "Rhyanna de Paiva Monteiro",
+  "sapato": "34/35",
+  "genero": "F"
+ },
+ {
+  "id": 27,
+  "nome": "Izadora Xavier de Arruda Muniz",
+  "sapato": "35",
+  "genero": "F"
+ },
+ {
+  "id": 28,
+  "nome": "Kauanny Maria Oliveira de Lara",
+  "sapato": "35",
+  "genero": "F"
+ },
+ {
+  "id": 29,
+  "nome": "Lais Hadassa de Sena Medeiros",
+  "sapato": "35/36",
+  "genero": "F"
+ },
+ {
+  "id": 30,
+  "nome": "Pérola Kariely da Silva Ferreira",
+  "sapato": "35/36",
+  "genero": "F"
+ },
+ {
+  "id": 31,
+  "nome": "Milena Vitória da Silva Lima",
+  "sapato": "35/36",
+  "genero": "F"
+ },
+ {
+  "id": 32,
+  "nome": "Yasmim Vitória Silva",
+  "sapato": "35/36",
+  "genero": "F"
+ },
+ {
+  "id": 33,
+  "nome": "Thaylla Luna da Cruz Oliveira",
+  "sapato": "35/36",
+  "genero": "F"
+ },
+ {
+  "id": 34,
+  "nome": "Lívia Maria Santos dos Reis",
+  "sapato": "35/36",
+  "genero": "F"
+ },
+ {
+  "id": 35,
+  "nome": "Taina Agata da Silva Pereira",
+  "sapato": "36",
+  "genero": "F"
+ },
+ {
+  "id": 36,
+  "nome": "Anny Victoria Costa Ribeiro",
+  "sapato": "36",
+  "genero": "F"
+ },
+ {
+  "id": 37,
+  "nome": "Maria Vitoria Santana Ferreira",
+  "sapato": "36",
+  "genero": "F"
+ },
+ {
+  "id": 38,
+  "nome": "Thaila Yasmim Correa da Silva",
+  "sapato": "36",
+  "genero": "F"
+ },
+ {
+  "id": 39,
+  "nome": "Tallyta Gabriella Alves dos Santos",
+  "sapato": "36",
+  "genero": "F"
+ },
+ {
+  "id": 40,
+  "nome": "Isadora Maciel Silva da Cruz",
+  "sapato": "36/37",
+  "genero": "F"
+ },
+ {
+  "id": 41,
+  "nome": "Ana Julia Almeida",
+  "sapato": "37",
+  "genero": "F"
+ },
+ {
+  "id": 42,
+  "nome": "Iasmin Letícia Tiemy da Silva Sampaio",
+  "sapato": "37",
+  "genero": "F"
+ },
+ {
+  "id": 43,
+  "nome": "Agatha Magalhães Avelino da Silva",
+  "sapato": "37/38",
+  "genero": "F"
+ },
+ {
+  "id": 44,
+  "nome": "Aline Cristina Santos de Oliveira",
+  "sapato": "37/38",
+  "genero": "F"
+ },
+ {
+  "id": 45,
+  "nome": "Alyce Campos Filberg",
+  "sapato": "37/38",
+  "genero": "F"
+ },
+ {
+  "id": 46,
+  "nome": "Luanny Gabrielli da Silva Arruda",
+  "sapato": "37/38",
+  "genero": "F"
+ },
+ {
+  "id": 47,
+  "nome": "Maisa Fernandes Nunes Ribeiro",
+  "sapato": "37/38",
+  "genero": "F"
+ },
+ {
+  "id": 48,
+  "nome": "Marielly Aparecida Santos",
+  "sapato": "37/38",
+  "genero": "F"
+ },
+ {
+  "id": 49,
+  "nome": "Raissa Brauno Sampaio",
+  "sapato": "37/38",
+  "genero": "F"
+ },
+ {
+  "id": 50,
+  "nome": "Mariana de Souza Cruz",
+  "sapato": "38/39",
+  "genero": "F"
+ },
+ {
+  "id": 51,
+  "nome": "Maisa Cabral da Silva",
+  "sapato": "39",
+  "genero": "F"
+ },
+ {
+  "id": 52,
+  "nome": "Ana Clara Morelli Vieira",
+  "sapato": "39/40",
+  "genero": "F"
+ },
+ {
+  "id": 53,
+  "nome": "Gabrielle Silva Alves de Souza",
+  "sapato": "39/40",
+  "genero": "F"
+ },
+ {
+  "id": 54,
+  "nome": "Maria Eduarda da Cruz Oliveira",
+  "sapato": "39/40",
+  "genero": "F"
+ },
+ {
+  "id": 55,
+  "nome": "Ana Beatriz Silva dos Santos",
+  "sapato": "40/41",
+  "genero": "F"
+ },
+ {
+  "id": 56,
+  "nome": "Luiz Gustavo Ormond de Jesus",
+  "sapato": "21",
+  "genero": "M"
+ },
+ {
+  "id": 57,
+  "nome": "Theo Ravy Martins Macena Barbosa",
+  "sapato": "22/23",
+  "genero": "M"
+ },
+ {
+  "id": 58,
+  "nome": "Heitor Benício Nunes da Silva",
+  "sapato": "24",
+  "genero": "M"
+ },
+ {
+  "id": 59,
+  "nome": "Leo Henrique da Silva Teixeira",
+  "sapato": "25",
+  "genero": "M"
+ },
+ {
+  "id": 60,
+  "nome": "Davi Miguel Borges da Silva",
+  "sapato": "25/26",
+  "genero": "M"
+ },
+ {
+  "id": 61,
+  "nome": "Hendrick Ravi Souza Santos",
+  "sapato": "27",
+  "genero": "M"
+ },
+ {
+  "id": 62,
+  "nome": "Gustavo Novais Pereira",
+  "sapato": "27",
+  "genero": "M"
+ },
+ {
+  "id": 63,
+  "nome": "Everton Gabriel Alencastro",
+  "sapato": "28",
+  "genero": "M"
+ },
+ {
+  "id": 64,
+  "nome": "Ravi Daniel da Cruz Silva Oliveira",
+  "sapato": "29/30",
+  "genero": "M"
+ },
+ {
+  "id": 65,
+  "nome": "Lucas Gabriel dos Reis",
+  "sapato": "29/30",
+  "genero": "M"
+ },
+ {
+  "id": 66,
+  "nome": "Ytalo Macário Ormond de Jesus",
+  "sapato": "30",
+  "genero": "M"
+ },
+ {
+  "id": 67,
+  "nome": "Pedro Henrique dos Reis Gallvao",
+  "sapato": "30",
+  "genero": "M"
+ },
+ {
+  "id": 68,
+  "nome": "Gaell Fernandez Barbosa Campos",
+  "sapato": "30",
+  "genero": "M"
+ },
+ {
+  "id": 69,
+  "nome": "Iran Davi Leite da Silva",
+  "sapato": "30/31",
+  "genero": "M"
+ },
+ {
+  "id": 70,
+  "nome": "Miguel Arthur de Oliveira Barbosa",
+  "sapato": "30/31",
+  "genero": "M"
+ },
+ {
+  "id": 71,
+  "nome": "Carlos Henrique Ferreira da Silva",
+  "sapato": "31",
+  "genero": "M"
+ },
+ {
+  "id": 72,
+  "nome": "Anthony Pietro de Sena Medeiro",
+  "sapato": "31/32",
+  "genero": "M"
+ },
+ {
+  "id": 73,
+  "nome": "Arcanjo Gabriel Souza Silva",
+  "sapato": "31/32",
+  "genero": "M"
+ },
+ {
+  "id": 74,
+  "nome": "Luiz Henrique de Oliveira Barbosa",
+  "sapato": "31/32",
+  "genero": "M"
+ },
+ {
+  "id": 75,
+  "nome": "Leonardo Pietro de Souza Ávila",
+  "sapato": "31/32",
+  "genero": "M"
+ },
+ {
+  "id": 76,
+  "nome": "Thomas Levy Martins Macena Barbosa",
+  "sapato": "31/32",
+  "genero": "M"
+ },
+ {
+  "id": 77,
+  "nome": "Anthony Rafael dos Reis Galvão",
+  "sapato": "32",
+  "genero": "M"
+ },
+ {
+  "id": 78,
+  "nome": "Joeberson Francisco Antunes da Silva",
+  "sapato": "32",
+  "genero": "M"
+ },
+ {
+  "id": 79,
+  "nome": "Arthur Guilherme Borges da Silva",
+  "sapato": "33/34",
+  "genero": "M"
+ },
+ {
+  "id": 80,
+  "nome": "Eduardo Henrique da Silva Soares Ferreira",
+  "sapato": "33/34",
+  "genero": "M"
+ },
+ {
+  "id": 81,
+  "nome": "Halerrandro Soares da Silva",
+  "sapato": "33/34",
+  "genero": "M"
+ },
+ {
+  "id": 82,
+  "nome": "Matheus Marques Batista",
+  "sapato": "33/34",
+  "genero": "M"
+ },
+ {
+  "id": 83,
+  "nome": "Davi Lucas dos Santos Conceição",
+  "sapato": "34",
+  "genero": "M"
+ },
+ {
+  "id": 84,
+  "nome": "Gustavo Almeida Borralho",
+  "sapato": "34",
+  "genero": "M"
+ },
+ {
+  "id": 85,
+  "nome": "Fabricio Passo da Silva",
+  "sapato": "35/36",
+  "genero": "M"
+ },
+ {
+  "id": 86,
+  "nome": "Lorenzo Miguel Santana",
+  "sapato": "35/36",
+  "genero": "M"
+ },
+ {
+  "id": 87,
+  "nome": "Vitor Gabriel da Silva Santos",
+  "sapato": "35/36",
+  "genero": "M"
+ },
+ {
+  "id": 88,
+  "nome": "Weverton Gabriel Borges da Silva",
+  "sapato": "35/36",
+  "genero": "M"
+ },
+ {
+  "id": 89,
+  "nome": "Samuel de Jesus Acosta",
+  "sapato": "35/36",
+  "genero": "M"
+ },
+ {
+  "id": 90,
+  "nome": "Luis Guilherme da Silva Sampaio",
+  "sapato": "36",
+  "genero": "M"
+ },
+ {
+  "id": 91,
+  "nome": "Pedro Henrique Viana Mendes",
+  "sapato": "36",
+  "genero": "M"
+ },
+ {
+  "id": 92,
+  "nome": "Caio Simolin Garcia Contantino",
+  "sapato": "37",
+  "genero": "M"
+ },
+ {
+  "id": 93,
+  "nome": "Gabriel Gomes Peixoto",
+  "sapato": "37",
+  "genero": "M"
+ },
+ {
+  "id": 94,
+  "nome": "Pedro Guilherme de Almeida",
+  "sapato": "37",
+  "genero": "M"
+ },
+ {
+  "id": 95,
+  "nome": "Pedro Henrique de Oliveira Silva",
+  "sapato": "37",
+  "genero": "M"
+ },
+ {
+  "id": 96,
+  "nome": "Samuel Lucas Ferreira dos Santos",
+  "sapato": "37",
+  "genero": "M"
+ },
+ {
+  "id": 97,
+  "nome": "Felipe Gabriel Soares da Silva",
+  "sapato": "38",
+  "genero": "M"
+ },
+ {
+  "id": 98,
+  "nome": "João Pedro de Jesus da Silva",
+  "sapato": "38",
+  "genero": "M"
+ },
+ {
+  "id": 99,
+  "nome": "Artur Rodrigues de Paula",
+  "sapato": "38",
+  "genero": "M"
+ },
+ {
+  "id": 100,
+  "nome": "Leilson Gabriel da Silva",
+  "sapato": "39/40",
+  "genero": "M"
+ },
+ {
+  "id": 101,
+  "nome": "Jhonatan Lopes Gomes",
+  "sapato": "40",
+  "genero": "M"
+ },
+ {
+  "id": 102,
+  "nome": "David Arthur dos Santos Conceição",
+  "sapato": "41",
+  "genero": "M"
+ },
+ {
+  "id": 103,
+  "nome": "Henrique Reinaldo Costa Ribeiro",
+  "sapato": "41",
+  "genero": "M"
+ },
+ {
+  "id": 104,
+  "nome": "Yan Lucas Nascimento da Silva",
+  "sapato": "41/42",
+  "genero": "M"
+ },
+ {
+  "id": 105,
+  "nome": "Anderson Lucas Santana de Oliveira",
+  "sapato": "42",
+  "genero": "M"
+ },
+ {
+  "id": 106,
+  "nome": "Ray Francisco Nunes da Silva",
+  "sapato": "42",
+  "genero": "M"
+ },
+ {
+  "id": 107,
+  "nome": "Ryan Nunes da Silva",
+  "sapato": "42",
+  "genero": "M"
+ },
+ {
+  "id": 108,
+  "nome": "Derick Yan Silva da Cruz",
+  "sapato": "42/43",
+  "genero": "M"
+ },
+ {
+  "id": 109,
+  "nome": "Thierry Pietro da Silva",
+  "sapato": "43",
+  "genero": "M"
+ },
+ {
+  "id": 110,
+  "nome": "Dhiego Wagno da Silva Lima",
+  "sapato": "43/44",
+  "genero": "M"
+ }
+]
