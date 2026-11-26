@@ -68,7 +68,7 @@
   .busca input:focus{outline:none;border-color:var(--navy);}
 
   .block-title{font-family:Georgia,serif;font-size:26px;margin:30px 0 4px;text-align:center;color:var(--wine);font-weight:700;}
-  .block-title::before,.block-title::after{content:"✦";color:var(--gold);font-size:14px;margin:0 12px;vertical-align:middle;}
+  .block-title::before,.block-title::after{content:"";display:inline-block;width:7px;height:7px;background:var(--gold);transform:rotate(45deg);margin:0 14px;vertical-align:middle;}
   .block-desc{text-align:center;font-size:14px;color:var(--muted);margin:0 0 16px;}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;}
@@ -84,7 +84,7 @@
   .card .nome{font-family:Georgia,serif;font-weight:700;font-size:15.5px;line-height:1.25;color:var(--navy);}
   .card.f .nome{color:var(--pink);}
   .card.m .nome{color:var(--blue);}
-  .card .pe{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ink);}
+  .card .pe{display:inline-flex;align-items:center;gap:4px;font-size:13.5px;color:var(--ink);}
   .card .pe b{font-size:15px;}
   .card .status{font-size:11.5px;color:var(--muted);}
   .card.tomada{background:var(--taken);border-color:#BDB7A5;cursor:default;opacity:.8;}
@@ -118,13 +118,13 @@
   .error-msg.show{display:block;}
   .success{text-align:center;padding:6px 0 4px;}
   .success .icon{width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 14px;}
+  .success .check{display:block;width:12px;height:22px;border:solid #fff;border-width:0 4px 4px 0;transform:rotate(45deg) translate(-2px,-2px);}
   .success p{color:var(--muted);font-size:14px;}
 
   .disclaimer{text-align:center;font-size:12px;color:var(--muted);margin-top:26px;padding-top:16px;border-top:1px solid #E5DCC3;}
 
   /* Rodapé */
   .site-footer{background:var(--cream);text-align:center;padding:26px 18px 30px;border-top:1px solid var(--gold);}
-  .site-footer .cruz{display:inline-flex;width:34px;height:34px;border-radius:8px;background:#7A4FC2;color:#fff;align-items:center;justify-content:center;font-size:20px;margin-bottom:10px;}
   .site-footer .frase{font-style:italic;color:var(--navy);font-size:15px;margin:0 0 10px;}
   .site-footer .lema{font-family:Georgia,serif;font-style:italic;font-weight:700;color:var(--navy);font-size:19px;margin:0 0 8px;}
   .site-footer .selo{font-size:12px;letter-spacing:.08em;color:#9A7B2E;text-transform:uppercase;}
@@ -136,7 +136,7 @@
 
 <header>
   <img class="medalhao" src="img/medalhao.png" alt="Menino Jesus">
-  <div class="kicker">✦ Natal Solidário 2026 ✦</div>
+  <div class="kicker">Natal Solidário 2026</div>
   <h1>Pequenos Pés, Grandes Sorrisos</h1>
   <div class="ornamento"></div>
   <p class="sub">Neste Natal, seja um instrumento do amor de Jesus. Apadrinhe uma criança do Oratório e presenteie-a com um par de chinelos.</p>
@@ -169,7 +169,6 @@
 </div>
 
 <footer class="site-footer">
-  <div class="cruz">✝</div>
   <p class="frase">Que cada gesto de caridade nos aproxime de Jesus.</p>
   <p class="lema">Estamos juntos pelo céu!</p>
   <div class="selo">Oratório • Natal 2026</div>
@@ -203,16 +202,42 @@ function esc(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&l
 function semAcento(s){ return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
 
 async function carregar(){
+  const aviso = [];
+  // 1) Lista de crianças (arquivo estático)
   try {
-    const [rc, ra] = await Promise.all([fetch('/criancas.json'), fetch('/api/apadrinhamentos')]);
+    const rc = await fetch('/criancas.json', { cache: 'no-store' });
+    if(!rc.ok) throw new Error('HTTP ' + rc.status);
     CRIANCAS = await rc.json();
+  } catch(e) {
+    console.error('Erro ao carregar criancas.json', e);
+    aviso.push('Não foi possível carregar a lista de crianças (arquivo public/criancas.json).');
+  }
+  // 2) Apadrinhamentos já feitos (API/banco) — se falhar, a lista continua aparecendo
+  claimed = {};
+  try {
+    const ra = await fetch('/api/apadrinhamentos', { cache: 'no-store' });
+    if(!ra.ok) throw new Error('HTTP ' + ra.status);
     const data = await ra.json();
-    claimed = {};
+    if(!Array.isArray(data)) throw new Error('resposta inesperada');
     data.forEach(row => { claimed[row.crianca_id] = row; });
   } catch(e) {
-    console.error('Erro ao carregar dados', e);
+    console.error('Erro ao carregar apadrinhamentos', e);
+    aviso.push('Não foi possível consultar os apadrinhamentos (verifique o banco de dados). Os já apadrinhados podem não aparecer como tal.');
   }
   renderGrid();
+  mostrarAviso(aviso);
+}
+
+function mostrarAviso(lista){
+  let el = document.getElementById('avisoCarga');
+  if(!el){
+    el = document.createElement('div');
+    el.id = 'avisoCarga';
+    el.style.cssText = 'background:#FCEBEA;color:#A33A34;border:1px solid #F0C6C3;border-radius:8px;padding:10px 14px;font-size:13px;margin:14px 0;text-align:center;';
+    document.getElementById('gridArea').before(el);
+  }
+  el.innerHTML = lista.map(esc).join('<br>');
+  el.style.display = lista.length ? 'block' : 'none';
 }
 
 function criarCard(c){
@@ -222,7 +247,7 @@ function criarCard(c){
   btn.dataset.nome = semAcento(c.nome);
   btn.innerHTML = `
     <span class="nome">${esc(c.nome)}</span>
-    <span class="pe">👣 Chinelo nº <b>${esc(c.sapato)}</b></span>
+    <span class="pe">Chinelo nº <b>${esc(c.sapato)}</b></span>
     <span class="status">${tomada ? (c.genero === 'F' ? 'Já apadrinhada' : 'Já apadrinhado') : 'Toque para apadrinhar'}</span>`;
   if(tomada){
     btn.disabled = true;
@@ -239,8 +264,8 @@ function renderGrid(){
   area.innerHTML = '';
 
   const blocos = [
-    {g:'F', titulo:'Meninas do Oratório', desc:'Escolha uma menina para apadrinhar'},
-    {g:'M', titulo:'Meninos do Oratório', desc:'Escolha um menino para apadrinhar'}
+    {g:'F', titulo:'Meninas', desc:'Escolha uma menina para apadrinhar'},
+    {g:'M', titulo:'Meninos', desc:'Escolha um menino para apadrinhar'}
   ];
   blocos.forEach(b => {
     const t = document.createElement('h2'); t.className = 'block-title'; t.textContent = b.titulo; area.appendChild(t);
@@ -358,7 +383,7 @@ async function submitClaim(){
 function showSuccess(c){
   document.getElementById('modalContent').innerHTML = `
     <div class="success">
-      <div class="icon">✓</div>
+      <div class="icon"><span class="check"></span></div>
       <h2>${esc(c.nome)} foi ${c.genero === 'F' ? 'apadrinhada' : 'apadrinhado'}!</h2>
       <p>Obrigado por ser um instrumento do amor de Jesus neste Natal. Providencie 1 par de chinelos novo, nº ${esc(c.sapato)}, e entregue conforme a orientação do Oratório.</p>
       <div class="modal-actions"><button class="primary" id="btnClose" style="flex:none;width:100%;">Fechar</button></div>
